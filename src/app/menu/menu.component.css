@@ -1,21 +1,25 @@
-.logo{
+.logo {
     color: #575757;
-    font-size: 2rem; /*rem é: */
-    font-weight: bold ;
-}
-.logo svg{
-width: 50px; /*Largura*/
-height: 50px; /*altura*/
-color: #219ebc ; 
+    font-size: 2rem;
+    /*rem é: */
+    font-weight: bold;
 }
 
-.logo span{
+.logo svg {
+    width: 50px;
+    /*Largura*/
+    height: 50px;
+    /*altura*/
     color: #219ebc;
 }
 
-.search input{
+.logo span {
+    color: #219ebc;
+}
+
+.search input {
     background-color: #f2f2f2;
-    padding: 5px 15px ;
+    padding: 5px 15px;
     width: 350px;
     /* margin: espaço do lado de fora do componente
     padding: espaço do lado de dentro do componente
@@ -24,19 +28,22 @@ color: #219ebc ;
 
 .search svg {
     height: 13px;
-    margin-left: -30px; /*para baixo*/
-    margin-top: -5px; /*para cima*/
+    margin-left: -30px;
+    /*para baixo*/
+    margin-top: -5px;
+    /*para cima*/
 }
 
-.btn-login{
+.btn-login {
     border: 1px solid #219ebc;
     background-color: #fff;
     color: #219ebc;
-    padding: 10px  65px;
+    padding: 10px 65px;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     background-color: #219ebc;
     color: #fff;
-    transition: 0.4s ease; /* ease= começa debagar fica rapido termina devagar */ 
+    transition: 0.4s ease;
+    /* ease= começa debagar fica rapido termina devagar */
 }
