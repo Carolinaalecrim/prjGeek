@@ -43,13 +43,12 @@ textarea {
 .btn-footer {
     background-color: #219ebc;
     color: #fff;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
     border: 1px solid #219ebc;
     padding: 10px 15px;
     /* ease= começa debagar fica rapido termina devagar */
 }
 
 .btn-footer:hover {
-    background-color: #fff;
-    color: #219ebc;
+    background-color: #42b9d7;
 }
