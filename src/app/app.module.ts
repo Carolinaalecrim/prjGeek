@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProdutoComponent } from './pages/produto/produto.component';
 import { CatalagoComponent } from './pages/catalago/catalago.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
+import { CaixinhaComponent } from './caixinha/caixinha.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
     LoginComponent,
     ProdutoComponent,
     CatalagoComponent,
-    AddProdutoComponent
+    AddProdutoComponent,
+    CaixinhaComponent
   ],
   imports: [
     BrowserModule,
