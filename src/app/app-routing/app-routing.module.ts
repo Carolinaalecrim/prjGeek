@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
 import { ProdutoComponent } from '../pages/produto/produto.component';
 import { LoginComponent } from '../pages/login/login.component';
-import { CatalagoComponent } from '../pages/catalago/catalago.component';
+import { CatalagoComponent } from '../pages/catalogo/catalago.component';
 import { AddProdutoComponent } from '../pages/add-produto/add-produto.component';
  
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'produto', component: ProdutoComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'catalago', component: CatalagoComponent},
+  {path: 'catalogo', component: CatalagoComponent},
   {path: 'cadstrar-produto', component: AddProdutoComponent}
 ];
 

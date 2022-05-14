@@ -8,9 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutoComponent } from './pages/produto/produto.component';
-import { CatalagoComponent } from './pages/catalago/catalago.component';
+import { CatalagoComponent } from './pages/catalogo/catalago.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { CaixinhaComponent } from './caixinha/caixinha.component';
+import { CaixinhaEdicaoComponent } from './caixinha-edicao/caixinha-edicao.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CaixinhaComponent } from './caixinha/caixinha.component';
     ProdutoComponent,
     CatalagoComponent,
     AddProdutoComponent,
-    CaixinhaComponent
+    CaixinhaComponent,
+    CaixinhaEdicaoComponent
   ],
   imports: [
     BrowserModule,
