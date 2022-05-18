@@ -1,1 +1,36 @@
-<p>add-produto works!</p>
+<div class=" container-fluid bg-light py-5">
+
+    <div class="col-4 mx-auto py-5">
+        <h3 class="mb-3">Adicionar novo produto</h3>
+
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="quadrado"></div>
+            <div>
+                <p>Ou</p>
+            </div>
+            <div>
+                    <button type="button" class="btn btn-outline-primary ">Procure no seu computador</button>
+            </div>
+           
+        </div> 
+        
+        <div class="form-floating mb-3 text-secondary">
+            <input type="text" class="form-control rounded-0 border-0 border-bottom" id="nomeProduto" placeholder="Nome do produto">
+
+            <label for="nomeProduto">Nome do produto</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-0  border-0 border-bottom" id="preco" placeholder="Preço do produto">
+
+            <label for="preco">Preço do produto</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Descrição do produto" id="dsc" style="height: 100px"></textarea>
+            <label for="dsc">Descrição do produto</label>
+        </div>
+
+        <button routerLink="/catalogo" class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
+
+    </div>
+</div>
