@@ -1,6 +1,7 @@
 .quadrado{
-    height: 100px;
-    width: 250px;
+    height: 150px;
+    width: 290px;
     margin-bottom: 15px;
-    background-color: #8888;
+    background-color: #fff;
+    border: 2px dashed #8888; 
 }
