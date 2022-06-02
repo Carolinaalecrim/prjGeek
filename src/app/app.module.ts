@@ -13,6 +13,7 @@ import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { CaixinhaComponent } from './caixinha/caixinha.component';
 import { CaixinhaEdicaoComponent } from './caixinha-edicao/caixinha-edicao.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CaixinhaEdicaoComponent } from './caixinha-edicao/caixinha-edicao.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
