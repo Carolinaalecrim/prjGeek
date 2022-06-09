@@ -1,7 +1,24 @@
-.quadrado{
+textarea{
+    min-height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .quadrado{
     height: 150px;
     width: 290px;
     margin-bottom: 15px;
     background-color: #fff;
     border: 2px dashed #8888; 
-}
+} */

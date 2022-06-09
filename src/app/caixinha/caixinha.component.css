@@ -12,3 +12,8 @@
 .limite{
     max-width: 170px;
 }
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+}

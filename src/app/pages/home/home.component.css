@@ -9,3 +9,26 @@
     background-size: cover;
     background-blend-mode: overlay ;
 }
+
+.ver-tudo{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ver-tudo svg{
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+.btn-footer {
+    background-color: #219ebc;
+    color: #fff;
+    transition: 0.2s ease;
+    border: 1px solid #219ebc;
+    padding: 10px 15px;
+    /* ease= começa debagar fica rapido termina devagar */
+}
+
+.btn-footer:hover {
+    background-color: #42b9d7;
+}

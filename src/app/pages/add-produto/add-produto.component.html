@@ -1,42 +1,21 @@
-<div class=" container-fluid bg-light py-5">
-
-    <div class="col-4 mx-auto py-5">
-        <h3 class="mb-3">Adicionar novo produto</h3>
-
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="quadrado">
-                
-             <div class="d-flex flex-column h-100 text-center align-items-center justify-content-center">
-                <img src="../../../assets/img/imagem.png">
-                <p class="pt-2"> Arraste para adicionar uma imagem para o produto </p>
-            </div>
-            </div>
-            <div>
-                <p>Ou</p>
-            </div>
-            <div>
-                    <button type="button" class="btn btn-outline-primary ">Procure no seu computador</button>
-            </div>
-           
-        </div> 
-        
-        <div class="form-floating mb-3 text-secondary">
-            <input type="text" class="form-control rounded-0 border-0 border-bottom" id="nomeProduto" placeholder="Nome do produto">
-
-            <label for="nomeProduto">Nome do produto</label>
-        </div>
-
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-0  border-0 border-bottom" id="preco" placeholder="Preço do produto">
-
-            <label for="preco">Preço do produto</label>
-        </div>
-        <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Descrição do produto" id="dsc" style="height: 100px"></textarea>
-            <label for="dsc">Descrição do produto</label>
-        </div>
-
-        <button routerLink="/catalogo" class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
-
+<div class="container-fluid bg-light py-5">
+    <div class="col-5 mx-auto py-5">
+        <h4 class="mb-3 fw-bold">Adicionar novo produto</h4>
+        <div class="form-floating mb-3 text-secondary"> <input type="text"
+                class="form-control rounded-0 border-0 border-bottom" id="imagem" placeholder="URL da imagem"> <label
+                for="imagem">URL da imagem</label> </div>
+        <div class="form-floating mb-3 text-secondary"> <input type="text"
+                class="form-control rounded-0 border-0 border-bottom" id="categoria" placeholder="Categoria"> <label
+                for="categoria">Categoria</label> </div>
+        <div class="form-floating mb-3 text-secondary"> <input type="text"
+                class="form-control rounded-0 border-0 border-bottom" id="produto" placeholder="Nome do produto"> <label
+                for="produto">Nome do produto</label> </div>
+        <div class="form-floating mb-3 text-secondary"> <input type="number"
+                class="form-control rounded-0 border-0 border-bottom" id="preco" placeholder="Preço do produto"> <label
+                for="preco">Preço do produto</label> </div>
+        <div class="form-floating mb-3 text-secondary"> <textarea class="form-control rounded-0 border-0 border-bottom"
+                id="descricao" placeholder="Descrição do produto"></textarea> <label for="descricao">Descrição do
+                produto</label> </div> <button routerLink="/catalogo"
+            class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
     </div>
 </div>
