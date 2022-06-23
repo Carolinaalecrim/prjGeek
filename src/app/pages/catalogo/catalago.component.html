@@ -3,12 +3,12 @@
         <div class="d-flex align-items-center justify-content-between">
             <!--utiliza o espaço da tela e reorganiza os espaçamentos -->
             <h3 class="m-0">Todos os produtos</h3>
-            <button class="btn btn-primary rounded-0 px-4 py-2" routerLink="/cadastrar-produto">
+            <button class="btn btn-custom rounded-0 px-4 py-2" routerLink="/cadastrar-produto">
                 Adicionar produto
             </button>
         </div>
         <div class="d-flex justify-content-between mt-5">
-            <app-caixinha-edicao *ngFor="let p of produtos" [prod]="p"></app-caixinha-edicao>
+            <app-caixinha-edicao *ngFor="let p of produtos" class="col-2 mb-2" [prod]="p"></app-caixinha-edicao>
         </div>
     </div>
 </div>

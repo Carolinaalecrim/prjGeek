@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { subscribeOn } from 'rxjs';
 import { Categoria } from 'src/app/interface/categoria';
+import { Produto } from 'src/app/interface/produto';
 
 @Component({
   selector: 'app-add-produto',
@@ -10,44 +12,85 @@ import { Categoria } from 'src/app/interface/categoria';
   styleUrls: ['./add-produto.component.css']
 })
 export class AddProdutoComponent implements OnInit {
-   categorias: Categoria[] = [];
-   url ="http://lucasreno.kinghost.net/loja/categorias";
-   urlPost = "http://lucasreno.kinghost.net/loja/produto";
-   form: FormGroup;
-   constructor(
+  categorias: Categoria[] = [];
+  url = "http://lucasreno.kinghost.net/loja/categorias";
+  urlPost = "http://lucasreno.kinghost.net/loja/produto";
+  form: FormGroup;
+  produto: Produto = {
+    idProduto: 0,
+    idCategoria: 0,
+    nome: '',
+    descricao: '',
+    preco: 0,
+    imagem: ''
+  };
+
+  constructor(
     private http: HttpClient,
-    private fb: FormBuilder // ajuda a validar as informações do formulario 
-    ) { 
+    private fb: FormBuilder, // ajuda a validar as informações do formulario 
+    private route: ActivatedRoute,
+    private router: Router, //rapaz que manda para outra pagina 
+  ) {
     this.pegarDados();
     this.form = fb.group({
+      id: 0,
       url: [''],
       categoria: 2,
-      nome:[''],
-      preco:[''],
-      descricao:['']
+      nome: [''],
+      preco: [''],
+      descricao: ['']
     });
   }
 
-  enviarDados(){
-    console.log(this.form.value);
-    this.http.post<any>(this.urlPost, this.form.value).subscribe(
-      resposta => {
-        console.log(resposta);
-        this.form.reset(); //resetar formulario//
-      },
-      error => {
-        console.log(error);
-      }
-    );
+  enviarDados() {
+    if (this.form.value.id == 0) {
+      this.http.post<any>(this.urlPost, this.form.value).subscribe(
+        resposta => {
+          this.router.navigateByUrl('/catalago'); //resetar formulario//
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    } else {
+      this.http.put<any>(this.urlPost, this.form.value).subscribe(
+        resposta => {
+          this.router.navigateByUrl('/catalago'); //resetar formulario//
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
   }
 
-  pegarDados(){
+  pegarDados() {
     this.http.get<Categoria[]>(this.url).subscribe(
       resposta => {
         this.categorias = resposta;
       }
     );
+    this.route.params.subscribe(
+      params => {
+        if (params["id"]) {
+          this.http.get<any>(this.urlPost + '/' + params["id"]).subscribe(
+            resposta => {
+              this.produto = resposta[0];
+              this.form = this.fb.group({
+                id: this.produto.idProduto,
+                url: [this.produto.imagem],
+                categoria: this.produto.idCategoria,
+                nome: [this.produto.nome],
+                preco: [this.produto.preco],
+                descricao: [this.produto.descricao]
+              });
+            }
+          );
+        }
+      }
+    );
   }
+
 
   ngOnInit(): void {
   }

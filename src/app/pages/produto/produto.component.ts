@@ -9,7 +9,6 @@ import { Produto } from 'src/app/interface/produto';
   styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent implements OnInit {
-
   produto: Produto = {
     idProduto: 0,
     idCategoria: 0,
@@ -22,7 +21,7 @@ export class ProdutoComponent implements OnInit {
   produtos: Produto[] = [];
 
   constructor(
-    private router: ActivatedRoute,
+    private route: ActivatedRoute,
     private http: HttpClient
   ) { }
 
@@ -36,7 +35,7 @@ export class ProdutoComponent implements OnInit {
       }
     );
     
-    this.router.params.subscribe(
+    this.route.params.subscribe(
       params => {
         this.http.get<any>(url + params["id"]).subscribe(
           resposta => {

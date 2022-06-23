@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produto } from '../interface/produto';
 
 @Component({
@@ -18,13 +19,19 @@ export class CaixinhaEdicaoComponent implements OnInit {
       
     };
 
-  constructor(private http: HttpClient) { }
+  constructor( 
+    private http: HttpClient,
+    ) { }
 
   ngOnInit(): void {
   }
 
   excluirProduto(idProduto: number){
    const url = "http://lucasreno.kinghost.net/loja/produto/" + idProduto;
-   this.http.delete(url).subscribe();
+   this.http.delete(url).subscribe(
+     resposta => {
+       window.location.reload();
+     }
+   );
+   }
   }
-}
